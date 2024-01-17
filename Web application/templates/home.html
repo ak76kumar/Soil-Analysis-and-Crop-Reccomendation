@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Analysis and Crop Recommendation</title>
+    <style>
+       input{
+         width: 10rem;
+         border: 1px;
+         border-radius: 5px;
+       }
+       button{
+        background-color: green;
+        border-radius: 3px;
+        width: 5rem;
+        height: 2rem;
+        
+       }
+    </style>
+</head>
+    <body bgcolor=#d4a3ae>
+        <img src='https://media.licdn.com/dms/image/D4D12AQGgXB2gsmc6Ew/article-cover_image-shrink_720_1280/0/1692360316446?e=1710979200&v=beta&t=-BG5ND2xvT8tv883kJAgohV8SUWynXBplt98VRGY7cw' style="width: 100%; height: auto; position: absolute; top: 0; left: 0; z-index: -1;" alt="Soil analysis">
+        
+        <center>
+
+        <h1> Soil Analysis and Crop recommendation System </h1><br>
+        <form method="POST", action="{{url_for('result')}}">
+           <b> N value :  <input type="text", name='a', placeholder=">=0 and <=140"> <br><br>
+            P value :  <input type="text", name='b', placeholder=">=5 and <=145"> <br><br>
+            K value :  <input type="text", name='c', placeholder=">=5 and <=205"> <br><br>
+            Temperature value : <input type="text", name='d', placeholder=">=8 and <=44"> <br><br>
+            Humidity value :  <input type="text", name='e', placeholder=">=14 and <=100"> <br><br>
+            PH value :  <input type="text", name='f', placeholder=">=3 and <=10"> <br><br>
+            Rainfall value :  <input type="text", name='g', placeholder=">=20 and <=300"> <br><br><br></b>
+            <!-- <input type="submit" , value='predict!' >  -->
+            <button>Predict</button>
+        </form>
+    </center>
+
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+
+<body bgcolor=#a3cfb4>
+
+    <center>
+
+        <h1>  PREDICTION :  </h1>
+    
+        {% if result %}
+            <p>PREDICTION FOR CROP: {{ result['Prediction'] }}</p> <br><br>
+            <h2>BEST FERTILIZER RECOMMANDATION</h2>
+            <p>Best Nitrogen level for this crop is: {{ result['Nitrogen'] }}</p>
+            <p>Best phosphorus level for this crop is: {{ result['phosphorus'] }}</p>
+            <p>Best potassium level for this crop is: {{ result['potassium'] }}</p>
+            <p>Best PH level for this crop is: {{ result['PH'] }}</p> <br><br>
+            <h2>DISEASE AND THEIR PREVENTIONS</h2>
+            <p>Possible disease crop can suffer through: {{ result['Disease'] }}</p>
+            <p>Some prevention of these disease: {{ result['Prevention'] }}</p>
+        {% else %}
+            <p>No result available</p>
+        {% endif %}
+    
+    <br><br>
+    <a href='/'>go back to home page</a>
+
+    </center>
+
+</body>
+
+</html>
+
+
+
+
+
+
